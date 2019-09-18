@@ -1,3 +1,3 @@
-modeul.exports = {
+module.exports = {
     publicPath: '<sms-reminders>'
 }
