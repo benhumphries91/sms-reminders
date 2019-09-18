@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/*
+  IMPORTANT!
+
+  Imports found here need to have ONLY variables, mixins and functions.
+  Everything else will be duplicated
+
+  https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+*/
+
+@import 'settings/index';
+@import 'tools/index';

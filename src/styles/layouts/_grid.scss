@@ -1,0 +1,120 @@
+// Name:			    Grid
+// Description:		Defines styles for the Grid System
+//
+// ===========================================================================
+
+/*
+Contents:
+  Sections
+  Containers
+  Rows
+  Columns
+*/
+
+/*  ==========================================================================
+    Sections
+    ========================================================================== */
+
+.section {
+  position: relative;
+  background-color: color(white);
+}
+
+/*  ==========================================================================
+    Containers
+    ========================================================================== */
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: $grid-max-width;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  padding-top: map-get($map: $spacing, $key: 30);
+  padding-bottom: map-get($map: $spacing, $key: 30);
+
+  @include breakpoint-min(sm) {
+    padding-top:  map-get($map: $spacing, $key: 50);;
+    padding-bottom: map-get($map: $spacing, $key: 50);;
+  }
+
+  &--narrow {
+    @include breakpoint-min(sm) {
+      padding-top: map-get($map: $spacing, $key: 30);
+      padding-bottom: map-get($map: $spacing, $key: 30);
+    }
+  }
+}
+
+/*  ==========================================================================
+    Rows
+    ========================================================================== */
+
+.row {
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -$grid-gutter-width;
+  margin-left: -$grid-gutter-width;
+
+  & + & {
+    margin-top: map-get($map: $spacing, $key: 30);
+  }
+}
+
+/*  ==========================================================================
+    Columns
+    ========================================================================== */
+
+.column {
+  flex: 1 0 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  max-width: 100%;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+
+  /*  ==========================
+      Modifiers
+      ========================== */
+
+  &--spaced {
+    padding-bottom: $grid-gutter-width;
+
+    @include breakpoint-min(sm) {
+      padding-bottom: $grid-gutter-width * 2;
+    }
+  }
+
+  &--align-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.col-12 + .col-12 {
+  @include breakpoint-max(xs) {
+    margin-top: map-get($map: $spacing, $key: 30);
+  }
+}
+
+@for $i from 1 through $grid-column-count {
+  .col-#{$i} {
+    @include column-styles($i);
+  }
+}
+
+@each $breakpoint, $minWidth in $breakpoints {
+  @for $i from 1 through $grid-column-count {
+    @include breakpoint-min($breakpoint) {
+      .#{$breakpoint}\:col-#{$i} {
+        @include column-styles($i);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// Name:					Type
+// Description:		Defines Type definitions
+//
+// ===========================================================================
+
+/*
+Contents:
+  Nexa
+  Icon Font
+*/
+
+/*  ==========================================================================
+    Nexa
+    ========================================================================== */
+
+@font-face {
+  font-display: swap;
+  font-family: 'D-DIN';
+  src: url('/fonts/D-DIN/D-DIN.eot') format('embedded-opentype'),
+    url('/fonts/D-DIN/D-DIN.woff') format('woff'),
+    url('/fonts/D-DIN/D-DIN.woff') format('woff2'),
+    url('/fonts/D-DIN/D-DIN.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'D-DIN';
+  src: url('/fonts/D-DIN/D-DIN-Bold.eot') format('embedded-opentype'),
+    url('/fonts/D-DIN/D-DIN-Bold.woff') format('woff'),
+    url('/fonts/D-DIN/D-DIN-Bold.woff') format('woff2'),
+    url('/fonts/D-DIN/D-DIN-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*  ==========================================================================
+    Icon Font
+    ========================================================================== */
+
+@font-face {
+  font-family: 'fontello-icons';
+  src: url('/fonts/fontello/fontello.eot?71396675');
+  src: url('/fonts/fontello/fontello.eot?71396675#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fontello/fontello.woff2?71396675') format('woff2'),
+    url('/fonts/fontello/fontello.woff?71396675') format('woff'),
+    url('/fonts/fontello/fontello.ttf?71396675') format('truetype'),
+    url('/fonts/fontello/fontello.svg?71396675#fontello') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}

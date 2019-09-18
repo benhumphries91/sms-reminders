@@ -1,0 +1,99 @@
+// Name:			Variables
+// Description:		Defines site-wide variables
+// ===========================================================================
+
+/*
+Contents:
+  Breakpoints
+  Grid
+  Type
+  Colors
+  Border
+  Margins & padding
+*/
+
+/*  ==========================================================================
+    Breakpoints
+    ========================================================================== */
+
+    $breakpoints: (
+        xs: 480,
+        sm: 768,
+        md: 1024,
+        lg: 1200
+      );
+      
+/*  ==========================================================================
+    Grid
+    ========================================================================== */
+
+    $grid-column-count: 12;
+    $grid-gutter-width: 1.6rem;
+    $grid-max-width: 1170px;
+
+/*  ==========================================================================
+    Type
+    ========================================================================== */
+
+    $font-family-primary: 'Manjari', 'Helvetica Neue', 'sans-serif';
+    
+    $font-size-base: 16px;
+    $font-size-paragraph: $font-size-base;
+    $font-size-heading-1: 50px;
+    $font-size-heading-2: 42px;
+    $font-size-heading-3: 36px;
+    $font-size-heading-4: 24px;
+    $font-size-heading-5: 20px;
+    $font-size-heading-6: 18px;
+    
+    $font-weight-normal: 400;
+    $font-weight-bold: 700;
+    
+    $line-height-none: 1;
+    $line-height-tight: 1.25;
+    $line-height-normal: 1.5;
+    $line-height-tall: 1.75;
+    
+    $letter-spacing-tight: -0.08em;
+    $letter-spacing-normal: 0.03em;
+    $letter-spacing-wide: 0.08em;
+      
+/*  ==========================================================================
+    Colors
+    ========================================================================== */
+    $black: #1a223c;
+    $white: #dedfe6;
+    $primary: #171f38;
+    $secondary: #242e4c;
+    $accent: #f371bb;
+    $text: #909dc5;
+
+    $gradientStart: #f073c6;
+    $gradientEnd: #fe6a96;
+
+    /*  ==========================================================================
+    Border
+    ========================================================================== */
+    $border-radius-sm: 5px;
+    $border-radius-default: 10px;
+    $border-radius-lg: 15px;
+    $border-radius-full: 9999px;
+
+/*  ==========================================================================
+    Margins & Padding
+    ========================================================================== */
+
+    $spacing: (
+    0: 0,
+    px: 1px,
+    10: 10px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+    80: 80px,
+    90: 90px,
+    100: 100px
+    );
