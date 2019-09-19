@@ -4,6 +4,7 @@ const fs = require("fs");
 const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/sms-reminders/" : "/",
   css: {
     loaderOptions: {
       sass: {
@@ -12,7 +13,7 @@ module.exports = {
       }
     }
   },
-  chainWebpack: config => {
+  chainWebpack: () => {
     [
       new GoogleFontsPlugin({
         fonts: [{ family: "Manjari" }]
